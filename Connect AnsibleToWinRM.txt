@@ -1,0 +1,23 @@
+1.	Open the Powershell on the target machine.
+
+2.	Run below command on powershell terminal
+
+               Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+3.	Now run the script ConfigureRemotingForAnsible.ps1
+
+4.	Set-Item –Path WSMan:\localhost\Service\Auth\Basic –Value $true
+
+5.	Set-NetConnectionProfile –NetworkCategory Private
+
+
+6.	winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+
+7.	Now come back to the ansible control machine and install python by using below command
+                sudo apt-get install python3.5
+
+8.	Also install pip apt install python-pip
+
+9.	Now run command pip install pywinrm
+
+                Now add inventory file and win_ping
