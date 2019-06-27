@@ -1,2 +1,2 @@
 # Ansible
-Ansible configuration and Playbooks
+Ansible configuration and Playbooks sample examples
